@@ -1,5 +1,5 @@
 // The HREF of the first category level 2
-var href = 'electronics/cell-phones.html';
+var href = 'electronics/cell-phones';
 
 // The test
 casper.test.begin('Category Level 2', function suite(test) {

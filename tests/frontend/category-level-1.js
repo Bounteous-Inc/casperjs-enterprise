@@ -1,5 +1,5 @@
 // The HREF of the first category level 1
-var href = 'furniture.html';
+var href = 'furniture';
 
 // The test
 casper.test.begin('Category Level 1', function suite(test) {

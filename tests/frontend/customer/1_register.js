@@ -7,10 +7,10 @@ casper.test.begin('Register new customer', function suite(test) {
 
         this.test.pass('Home was loaded');
         // check that the home page has the link login
-        test.assertExists('.quick-access ul li.last a[href="' + mage.getUrl('customer/account/login') + '"]');
+        test.assertExists('.links a[href="' + mage.getUrl('customer/account/login') + '"]');
     })
 
-    .thenClick('.quick-access ul li.last a[href="' + mage.getUrl('customer/account/login') + '"]', function() {
+    .thenClick('.links a[href="' + mage.getUrl('customer/account/login') + '"]', function() {
 
         test.assertHttpStatus(200);
         this.test.pass('Login page was loaded');

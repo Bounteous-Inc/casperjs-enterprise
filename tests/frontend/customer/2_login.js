@@ -6,10 +6,10 @@ casper.test.begin('Customer login', function suite(test) {
         test.assertHttpStatus(200);
 
         // check that the home page has the link login
-        test.assertExists('.quick-access ul li.last a[href="' + mage.getUrl('customer/account/login') + '"]');
+        test.assertExists('.links a[href="' + mage.getUrl('customer/account/login') + '"]');
     })
 
-    .thenClick('.quick-access ul li.last a[href="' + mage.getUrl('customer/account/login') + '"]', function() {
+    .thenClick('.links a[href="' + mage.getUrl('customer/account/login') + '"]', function() {
 
         test.assertHttpStatus(200);
 
@@ -19,8 +19,8 @@ casper.test.begin('Customer login', function suite(test) {
         test.assertExists('input#pass');
 
         // Forgot password link
-        test.assertExists('#login-form .registered-users .buttons-set a');
-        test.assertSelectorHasText('#login-form .registered-users .buttons-set a', 'Forgot Your Password?');
+        test.assertExists('#login-form .registered-users li.note a');
+        test.assertSelectorHasText('#login-form .registered-users li.note a', 'Forgot Your Password?');
 
         // fill the form with wrong credentials
         test.info('Login with invalid identifiers');
@@ -60,4 +60,3 @@ casper.test.begin('Customer login', function suite(test) {
         test.done();
     });
 });
-

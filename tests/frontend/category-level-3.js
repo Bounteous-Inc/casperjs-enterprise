@@ -1,6 +1,6 @@
 // The HREF of the first category level 2
-var href_level2 = 'apparel/shoes.html';
-var href = 'apparel/shoes/mens.html';
+var href_level2 = 'apparel/shoes';
+var href = 'apparel/shoes/mens';
 
 // The test
 casper.test.begin('Category Level 3', function suite(test) {

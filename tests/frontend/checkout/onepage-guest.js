@@ -5,26 +5,12 @@ casper.test.begin('Checkout as a guest', function suite(test) {
     });
 
     // Start page
-    casper.start(mage.getDirectUrl('apparel.html'), function () {
-
+    casper.start(mage.getDirectUrl('coalesce-functioning-on-impatience-t-shirt.html'), function () {
         test.assertHttpStatus(200);
 
-        test.assertUrlMatch(mage.getDirectUrl('apparel.html'));
-
-        // check that the home page has the link login
-        test.assertExists('button.button.btn-cart:first-child');
-        this.click('button.button.btn-cart:first-child');
-
-    })
-
-    .waitForUrl(mage.getDirectUrl('coalesce-functioning-on-impatience-t-shirt.html'), function() {
-
-        test.assertHttpStatus(200);
-
-        test.assertUrlMatch(mage.getDirectUrl('coalesce-functioning-on-impatience-t-shirt.html'));
 
         this.evaluate(function() {
-            var elmt = document.querySelector('select#attribute525');
+            var elmt = document.querySelector('select#attribute149');
             elmt.selectedIndex = 2;
             elmt.onchange();
         });
